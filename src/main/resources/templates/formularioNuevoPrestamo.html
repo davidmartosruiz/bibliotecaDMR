@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Préstamo - Bibliotecas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="/listadoPrestamos">Volver al listado</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Añadir préstamo</h2>
+  <form action="/añadirPrestamoCSV" method="post">
+    <label for="codigoLibro">Codigo libro:</label>
+    <input type="text" id="codigoLibro" name="codigoLibro"><br>
+
+    <label for="codigoLector">Código lector:</label>
+    <input type="text" id="codigoLector" name="codigoLector"><br>
+
+    <label for="fechaInicio">Fecha de préstamo:</label>
+    <input type="date" id="fechaInicio" name="fechaInicio"><br>
+
+    <input type="submit" value="Añadir">
+  </form>
+</main>
+</body>
+</html>

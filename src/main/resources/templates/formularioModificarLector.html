@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar lector - Bibliotecas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="/listadoLectores">Volver al listado</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Modificar lector</h2>
+  <form action="/modificarLectorPrecargado" method="post">
+    <div class="form-group">
+      <label for="codigo">Código del lector:</label>
+      <input type="number" class="form-control" id="codigo" name="codigo" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Modificar lector</button>
+  </form>
+</main>
+</body>
+</html>

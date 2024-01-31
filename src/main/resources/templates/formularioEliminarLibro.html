@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Eliminar libro - Bibliotecas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="/">Volver al listado</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Eliminar libro</h2>
+  <form action="/eliminarLibroCSV" method="post">
+    <div class="form-group">
+      <label for="codigo">Código del libro:</label>
+      <input type="number" class="form-control" id="codigo" name="codigo" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Eliminar libro</button>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado lectores - Bibliotecas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Libros</a></li>
+        <li><a href="/listadoLectores">Lectores</a></li>
+        <li><a href="/listadoPrestamos">Préstamos</a></li>
+    </ul>
+</nav>
+<nav class="subNav">
+    <ul>
+        <li><a href="/anadirLector">Añadir lector</a></li>
+        <li><a href="/modificarLector">Modificar lector</a></li>
+        <li><a href="/eliminarLector">Eliminar lector</a></li>
+        <li><a href="/exportarPDFLector">Exportar listado a PDF</a></li>
+        <li><a href="/exportarPDFCarnets">Exportar carnets a PDF</a></li>
+    </ul>
+</nav>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Apellidos</th>
+            <th>Nombre</th>
+            <th>DNI</th>
+            <th>Fecha de nacimiento</th>
+            <th>Nº de teléfono</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="lector : ${lectores}">
+            <td th:text="${lector.codigo}"></td>
+            <td th:text="${lector.apellidos}"></td>
+            <td th:text="${lector.nombre}"></td>
+            <td th:text="${lector.DNI}"></td>
+            <td th:text="${lector.fechaNacimiento}"></td>
+            <td th:text="${lector.numeroTelefono}"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<footer>
+    <p>&copy; 2023 David Martos Ruiz</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar lector - Bibliotecas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="/listadoLectores">Volver al listado</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Modificar lector</h2>
+  <form action="/modificarLectorPrecargadoCSV" method="post">
+    <input type="hidden" id="codigo" name="codigo" th:value="${lector.codigo}"><br>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" th:value="${lector.apellidos}"><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" th:value="${lector.nombre}"><br>
+
+    <label for="DNI">DNI:</label>
+    <input type="text" id="DNI" name="DNI" th:value="${lector.DNI}"><br>
+
+    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="fechaNacimiento" name="fechaNacimiento" th:value="${#strings.substring(lector.fechaNacimiento, 6, 10) + '-' + #strings.substring(lector.fechaNacimiento, 3, 5) + '-' + #strings.substring(lector.fechaNacimiento, 0, 2)}"><br>
+
+    <label for="numeroTelefono">Número de teléfono:</label>
+    <input type="text" id="numeroTelefono" name="numeroTelefono" th:value="${lector.numeroTelefono}"><br>
+
+    <input type="submit" value="Modificar">
+  </form>
+</main>
+</body>
+</html>

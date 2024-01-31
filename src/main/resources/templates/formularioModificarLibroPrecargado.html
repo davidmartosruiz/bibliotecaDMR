@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar libro - Bibliotecas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="/">Volver al listado</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Modificar libro</h2>
+  <form action="/modificarLibroPrecargadoCSV" method="post">
+    <input type="hidden" id="codigo" name="codigo" th:value="${libro.codigo}"><br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" th:value="${libro.nombre}"><br>
+
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" name="autor" th:value="${libro.autor}"><br>
+
+    <label for="ISBN">ISBN:</label>
+    <input type="text" id="isbn" name="isbn" th:value="${libro.isbn}"><br>
+
+    <label for="anyoPublicacion">Año de publicación:</label>
+    <input type="text" id="anyoPublicacion" name="anyoPublicacion" th:value="${libro.anyoPublicacion}"><br>
+
+    <label for="categoria">Número de teléfono:</label>
+    <input type="text" id="categoria" name="categoria" th:value="${libro.categoria}"><br>
+
+    <input type="submit" value="Modificar">
+  </form>
+</main>
+</body>
+</html>

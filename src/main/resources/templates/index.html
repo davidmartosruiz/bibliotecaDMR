@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado libros - Bibliotecas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Sistema Gestor de Bibliotecas</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Libros</a></li>
+        <li><a href="/listadoLectores">Lectores</a></li>
+        <li><a href="/listadoPrestamos">Préstamos</a></li>
+    </ul>
+</nav>
+<nav class="subNav">
+    <ul>
+        <li><a href="/anadirLibro">Añadir libro</a></li>
+        <li><a href="/modificarLibro">Modificar libro</a></li>
+        <li><a href="/eliminarLibro">Eliminar libro</a></li>
+        <li><a href="/exportarPDF">Exportar listado a PDF</a></li>
+    </ul>
+</nav>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th>ISBN</th>
+            <th>Año de Publicación</th>
+            <th>Categoría</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="libro : ${libros}">
+            <td th:text="${libro.codigo}"></td>
+            <td th:text="${libro.nombre}"></td>
+            <td th:text="${libro.autor}"></td>
+            <td th:text="${libro.isbn}"></td>
+            <td th:text="${libro.anyoPublicacion}"></td>
+            <td th:text="${libro.categoria}"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<footer>
+    <p>&copy; 2023 David Martos Ruiz</p>
+</footer>
+</body>
+</html>
